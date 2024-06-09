@@ -1,0 +1,25 @@
+Screen {
+    background: $surface-darken-1;
+    &:inline {
+        height: 50vh;
+    }
+}
+
+#files-tree {
+    display: block;
+    scrollbar-gutter: stable;
+    overflow: auto;
+    width: auto;
+    max-width: 50%;
+    height: 100%;
+    dock: left;
+}
+
+#files-view {
+    overflow: auto scroll;
+    min-width: 100%;
+}
+
+#files-content {
+    width: auto;
+}
