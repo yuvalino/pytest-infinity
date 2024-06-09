@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "pytest-infinity"
+version = "1.0.0"
+description = ""
+authors = ["Yuvalino <yuvalino@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^8.0.0"
+pytest-xstress = "^1.0.1"
+flask = "^3.0.3"
+textual = "^0.63.4"
+pytest-xdist = "^3.6.1"
+pytest-publish = "^1.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5"
+
+[tool.poetry.scripts]
+infinity = "pytest_infinity.infinity:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+#[tool.pytest.ini_options]
+#filterwarnings = ["ignore::_pytest.warning_types.PytestUnknownMarkWarning"]
+
+[tool.ruff]
+line-length = 88
+# pyflakes, pycodestyle, isort
+lint.select = ["F", "E", "W", "I001"]
+lint.ignore = ["E203", "E501"]
